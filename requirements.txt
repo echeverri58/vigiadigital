@@ -3,3 +3,6 @@ PyMuPDF==1.19.0
 requests
 beautifulsoup4
 lxml
+os 
+beautifulsoup4 
+tqdm
