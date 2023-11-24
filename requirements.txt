@@ -1,5 +1,5 @@
 streamlit
-pandas
-numpy
-folium
-streamlit-folium
+PyMuPDF==1.19.0
+requests
+beautifulsoup4
+lxml
