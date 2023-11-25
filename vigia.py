@@ -69,7 +69,8 @@ def process_downloaded_pdfs(keyword):
             doc = fitz.open(os.path.join(path, file))
             encontrado = False
 
-            for page in doc:
+            for page_number in range(doc.page_count):
+                page = doc[page_number]
                 text = page.get_text()
                 if keyword in text:
                     page.add_highlight_annot(text.find(keyword), text.rfind(keyword), fill="red")
