@@ -71,7 +71,7 @@ def process_downloaded_pdfs(keyword):
 
             for page_number in range(doc.page_count):
                 page = doc[page_number]
-                text = page.get_text()
+                text = page.get_text("text")
                 if keyword in text:
                     page.add_highlight_annot(text.find(keyword), text.rfind(keyword), fill="red")
                     encontrado = True
@@ -124,4 +124,3 @@ elif menu == "Eliminar PDFs":
     st.sidebar.write("Haga clic en el botón para eliminar los archivos PDF descargados manualmente.")
     if st.sidebar.button("Eliminar"):
         delete_downloaded_pdfs()
-
