@@ -34,7 +34,7 @@ def download_pdfs():
 
     with st.empty():
         for link in links:
-            if ('.pdf' in link.get('href', [])):
+            if '.pdf' in link.get('href', []):
                 i += 1
                 pdf_url = link.get('href')
                 st.write(f"Descargando archivo {i}/{total_pdfs}: {pdf_url}")
