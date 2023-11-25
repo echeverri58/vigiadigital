@@ -98,8 +98,9 @@ def delete_downloaded_pdfs():
         st.success("Archivos PDF descargados eliminados con éxito.")
 
 # Limpiar archivos PDF descargados al inicio de la aplicación
-if os.path.exists("PDF"):
-    delete_downloaded_pdfs()
+# if os.path.exists("PDF"):
+#     delete_downloaded_pdfs()
+
 
 # Interfaz de usuario
 menu = st.sidebar.selectbox("Selecciona una opción:", ["Descargar PDFs", "Procesar PDFs", "Eliminar PDFs"])
