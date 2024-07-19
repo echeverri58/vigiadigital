@@ -75,7 +75,7 @@ def buscar_palabra_clave_en_pdf(url, palabra_clave):
 st.set_page_config(page_title="Vigías del Río Dormilón", page_icon=":guardsman:", layout="wide")
 
 st.title("Vigías del Río Dormilón de San Luis Antioquia")
-st.image("logo.png", width=200)  # Asegúrate de tener un archivo 'logo.png' en tu directorio
+st.image("https://github.com/echeverri58/vigiadigital/blob/main/logo.png?raw=true", width=200)  # Asegúrate de tener un archivo 'logo.png' en tu directorio
 st.markdown("""
 ### Este es un script para fortalecer los procesos de resistencia e incidencia de las comunidades en defensa de los recursos naturales.
 
