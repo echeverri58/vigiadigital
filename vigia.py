@@ -16,6 +16,7 @@ def buscar_palabra_clave_en_pdf(url, palabra_clave):
     links = soup.find_all('a', href=True)
     total_pdfs = 0
     encontrados = 0
+    resultados = []
 
     # Contar el número total de archivos PDF
     for link in links:
@@ -55,7 +56,7 @@ def buscar_palabra_clave_en_pdf(url, palabra_clave):
                             paginas_con_palabra_clave.append(page_num + 1)
 
                     if paginas_con_palabra_clave:
-                        st.write(f"La palabra clave '{palabra_clave}' se encontró en las páginas {paginas_con_palabra_clave} del PDF: {link_href}")
+                        resultados.append((link_href, paginas_con_palabra_clave))
                         encontrados += 1
 
             except Exception as e:
@@ -71,6 +72,8 @@ def buscar_palabra_clave_en_pdf(url, palabra_clave):
         st.write("No se encontró la palabra clave en ninguno de los PDFs revisados.")
     else:
         st.write("Todos los archivos PDF han sido revisados.")
+        for i, (link_href, paginas_con_palabra_clave) in enumerate(resultados, start=1):
+            st.write(f"{i}. La palabra clave '{palabra_clave}' se encontró en las páginas {paginas_con_palabra_clave} del PDF: {link_href}")
 
 st.set_page_config(page_title="Vigías del Río Dormilón", page_icon=":guardsman:", layout="wide")
 
