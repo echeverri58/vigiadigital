@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Saludo inicial
-        run: echo "¡Hola mundo, esta es mi primera GitHub Action!"
+        run: echo "¡Hola mundo cruel, se que saldré adelante.
