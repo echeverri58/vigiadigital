@@ -1,11 +1,16 @@
-name: Hola Mundo Workflow
+name: Hola Mundo Continuo
 
-# Define qué evento dispara la acción
 on: [push]
 
 jobs:
-  saludar-job:
+  bucle-saludo:
     runs-on: ubuntu-latest
     steps:
-      - name: Saludo inicial
-        run: echo "¡Hola mundo cruel, se que saldré adelante."
+      - name: Ejecutar bucle de saludos
+        shell: bash
+        run: |
+          for i in {1..10}
+          do
+             echo "¡Hola mundo! Iteración: $i"
+             sleep 5
+          done
