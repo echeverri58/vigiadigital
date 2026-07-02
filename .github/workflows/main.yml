@@ -1,0 +1,11 @@
+name: Hola Mundo Workflow
+
+# Define qué evento dispara la acción
+on: [push]
+
+jobs:
+  saludar-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Saludo inicial
+        run: echo "¡Hola mundo, esta es mi primera GitHub Action!"
